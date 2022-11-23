@@ -1,5 +1,5 @@
 const { Schema, model } = require('mongoose');
-// reaction schema?
+const reactionSchema = require('./Reaction');
 // date format util function?
 
 const thoughtSchema = new Schema(
@@ -19,7 +19,7 @@ const thoughtSchema = new Schema(
             type: String,
             required: true,
         },
-        // reactionSchema, Array of nested documents created 
+        reactions: [reactionSchema]
     },
     {
         toJSON: {
