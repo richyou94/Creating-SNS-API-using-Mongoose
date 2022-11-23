@@ -1,6 +1,6 @@
-const router = require('express').Router();
+const router = require("express").Router();
 
-const {} = require('../../controllers/thoughtController');
+const {} = require("../../controllers/thoughtController");
 
 // api/thoughts
 

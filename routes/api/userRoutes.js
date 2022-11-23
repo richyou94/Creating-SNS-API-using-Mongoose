@@ -6,4 +6,8 @@ const {} = require("../../controllers/userController.js");
 
 //api/users/userId
 
+//api/users/userId/friends/friend/:friendId
+
+
+
 module.exports = router;
