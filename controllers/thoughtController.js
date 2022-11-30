@@ -1,3 +1,6 @@
+const {
+  removeReaction,
+} = require("../../../UCI-VIRT-FSF-PT-06-2022-U-LOLC/01-Class-Content/18-NoSQL/02-Challenge/Main/controllers/thought-controller");
 const { Thought, User } = require("../models");
 
 const thoughtController = {
@@ -57,11 +60,43 @@ const thoughtController = {
       .catch((err) => res.status(500).json(err));
   },
 
-  //remove thought id from user's thoughts' field
-
   // add reaction to thought
+  addReaction(req, res) {
+    Thought.findOneAndUpdate(
+      { _id: req.params.thoughtId },
+      { $addtoSet: { reactions: req.body } },
+      { runValidators: true, new: true }
+    )
+      .then((dbThoughtData) => {
+        if (!dbThoughtData) {
+          return res.status(404).json({ message: "No thought found" });
+        }
+        res.json(dbThoughtData);
+      })
+      .catch((err) => {
+        console.log(err);
+        res.status(500).json(err);
+      });
+  },
 
   // remove reaction from thought
+  removeReaction(req, res) {
+    Thought.findOneAndUpdate(
+      { _id: req.params.thoughtId },
+      { $pull: { reactions: { reactionId: req.params.reactionId } } },
+      { runValidators: true, new: true }
+    )
+      .then((dbThoughtData) => {
+        if (!dbThoughtData) {
+          return res.status(404).json({ message: "No Thought found" });
+        }
+        res.json(dbThoughtData);
+      })
+      .catch((err) => {
+        console.log(err);
+        res.status(500).json(err);
+      });
+  },
 };
 
 module.exports = thoughtController;
