@@ -1,0 +1,22 @@
+[
+    {
+        "_id": "1seed",
+        "thoughtText": "This is thought text one",
+        "username": "richardyou94"
+    },
+    {
+        "_id": "2seed",
+        "thoughtText": "This is thought text two",
+        "username": "fayjk127"
+    },
+    {
+        "_id": "3seed",
+        "thoughtText": "This is thought text three",
+        "username": "testinguser123"
+    },
+    {
+        "_id": "4seed",
+        "thoughtText": "This is thought text four",
+        "username": "vinnienasci432"
+    }
+]

@@ -1,0 +1,38 @@
+[
+  {
+    "username": "richardyou94",
+    "email": "richardyou94@gmail.com",
+    "thoughts": [
+      {
+        "_id": "1seed"
+      }
+    ]
+  },
+  {
+    "username": "fayjk127",
+    "email": "fayjk127@gmail.com",
+    "thoughts" : [
+      {
+        "_id": "2seed"
+      }
+    ]
+  },
+  {
+    "username": "testinguser123",
+    "email": "testinguser123@gmail.com",
+    "thoughts" : [
+      {
+        "_id": "3seed"
+      }
+    ]
+  },
+  {
+    "username": "vinnienasci432",
+    "email": "vinnienasci432@gmail.com",
+    "thoughts": [
+      {
+        "_id": "4seed"
+      }
+    ]
+  }
+]

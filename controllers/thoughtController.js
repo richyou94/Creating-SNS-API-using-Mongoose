@@ -1,12 +1,10 @@
-const {
-  removeReaction,
-} = require("../../../UCI-VIRT-FSF-PT-06-2022-U-LOLC/01-Class-Content/18-NoSQL/02-Challenge/Main/controllers/thought-controller");
 const { Thought, User } = require("../models");
 
 const thoughtController = {
   //get all thoughts
   getThoughts(req, res) {
     Thought.find()
+      .sort({ createdAt: -1 })
       .then((thoughts) => res.json(thoughts))
       .catch((err) => res.status(500).json(err));
   },
@@ -18,7 +16,7 @@ const thoughtController = {
       .then((thought) =>
         !thought
           ? res.status(404).json({ message: "no thought with that ID" })
-          : res.json(course)
+          : res.json(thought)
       )
       .catch((err) => res.status(500).json(err));
   },
