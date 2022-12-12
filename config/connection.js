@@ -1,12 +1,8 @@
 const mongoose = require('mongoose');
 
-const dbName = "snsData";
-const connectionString =
-  process.env.MONGODB_URI || `mongodb://127.0.0.1:27017/${dbName}`;
-
-mongoose.connect(connectionString, {
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/snsData', {
   useNewUrlParser: true,
-  userUnifiedTopology: true
-})
+  useUnifiedTopology: true
+});
 
 module.exports = mongoose.connection;
