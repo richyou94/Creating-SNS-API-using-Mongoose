@@ -2,6 +2,9 @@
 
 ## Main Contributor: Richard You
 
+[Repository Link](https://github.com/YichanYouRichard/Creating-SNS-API-using-Mongoose)
+[Video Link](https://youtu.be/iJ9nz6tPyTs)
+
 ## Table of Contents
 
 - [SNS API using MongoDB](#sns-api-using-mongodb)
